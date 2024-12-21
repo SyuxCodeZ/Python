@@ -1,26 +1,19 @@
-# first type the obtained marks of the test
+operator = input("Enter An Operator (+ - * /): ")
 
-obtainedmarks = float(input("Enter The Obtained Marks: "))
+num1 = float(input("Enter The 1st Number: "))
+num2 = float(input("Enter The 2nd Number: "))
 
-# then type the full marks of the subject
-
-fullmarks = float(input("Enter The Full Marks: "))
-
-# then calculate the percentage
-
-percentage = obtainedmarks / fullmarks * 100
-percentage = int(percentage)
-
-# then print the number with the % symbol and add error messages
-
-if obtainedmarks <= fullmarks:
-
-    print(f"{percentage}%")
-
-elif obtainedmarks == fullmarks:
-
-    print("Obtained Marks And Full Marks Cannot Have The Same Value")
-
-elif fullmarks <= obtainedmarks:
-
-    print("Obtained Marks Should Be Lower Than Full Marks")
+if operator == "+":
+    result = num1 * num2
+    print(round(result, 4))
+elif operator == "-":
+    result = num1 - num2
+    print(round(result, 4))
+elif operator == "*":
+    result = num1 * num2
+    print(round(result, 4))
+elif operator == "/":
+    result = num1 / num2
+    print(round(result, 4))
+else:
+    print(f"{operator} Is Not A Valid Operator")
